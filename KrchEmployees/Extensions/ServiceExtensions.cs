@@ -1,4 +1,7 @@
-﻿namespace KrchEmployees.Extensions;
+﻿using Contracts;
+using LoggerService;
+
+namespace KrchEmployees.Extensions;
 
 public static class ServiceExtensions
 {
@@ -6,4 +9,7 @@ public static class ServiceExtensions
     {
         options.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
     });
+
+    public static void ConfigureLoggerService(this IServiceCollection services) =>
+        services.AddSingleton<ILoggerManager, LoggerManager>();
 }
