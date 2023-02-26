@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Design;
 using Repository;
 
-namespace KrchEmployees.RepositoryContextFactory;
+namespace KrchEmployees.ContextFactory;
 
 public class RepositoryContextFactory : IDesignTimeDbContextFactory<RepositoryContext>
 {
