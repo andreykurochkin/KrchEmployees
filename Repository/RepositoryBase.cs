@@ -1,8 +1,8 @@
 ﻿using System.Linq.Expressions;
+using Contracts;
 using Microsoft.EntityFrameworkCore;
-using Repository;
 
-namespace Contracts;
+namespace Repository;
 
 public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : class
 {
