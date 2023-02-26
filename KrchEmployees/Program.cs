@@ -7,6 +7,7 @@ LogManager.LoadConfiguration(Path.Combine(Directory.GetCurrentDirectory(), "nlog
 builder.Services.AddControllers();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureLoggerService();
+builder.Services.ConfigureRepositoryManager();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
