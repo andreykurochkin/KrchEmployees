@@ -11,10 +11,3 @@ public interface IRepositoryBase<T>
     void Update(T entity);
     void Delete(T entity);
 }
-
-public interface IRepositoryManager
-{
-    ICompanyRepository Company { get; }
-    IEmployeeRepository Employee { get; }
-    void Save();
-}
