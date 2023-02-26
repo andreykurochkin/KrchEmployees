@@ -9,7 +9,7 @@ builder.Services.ConfigureCors();
 builder.Services.ConfigureLoggerService();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
-builder.Services.ConfigureSqlContext();
+builder.Services.ConfigureSqlContext(builder.Configuration);
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
