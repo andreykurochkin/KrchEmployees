@@ -16,16 +16,8 @@ public class CompaniesController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetCompanies()
-    {
-        throw new Exception("Exception");
-        return Ok(_service.CompanyService.GetAllCompanies(false));
-    }
+    public IActionResult GetCompanies() => Ok(_service.CompanyService.GetAllCompanies(false));
 
     [HttpGet("{id:guid}")]
-    public IActionResult GetCompany(Guid id)
-    {
-        var company = _service.CompanyService.GetCompany(id, false);
-        return Ok(company);
-    }
+    public IActionResult GetCompany(Guid id) => Ok(_service.CompanyService.GetCompany(id, false));
 }
