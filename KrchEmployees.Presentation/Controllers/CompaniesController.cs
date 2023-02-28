@@ -21,4 +21,11 @@ public class CompaniesController : ControllerBase
         throw new Exception("Exception");
         return Ok(_service.CompanyService.GetAllCompanies(false));
     }
+
+    [HttpGet("{id:guid}")]
+    public IActionResult GetCompany(Guid id)
+    {
+        var company = _service.CompanyService.GetCompany(id, false);
+        return Ok(company);
+    }
 }
