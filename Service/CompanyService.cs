@@ -24,4 +24,7 @@ public class CompanyService : ICompanyService
         var companies = _repository.Company.GetAllCompanies(trackChanges);
         return _mapper.Map<IEnumerable<CompanyDto>>(companies);
     }
+
+    public CompanyDto? GetCompany(Guid companyId, bool trackChanges) =>
+        _mapper.Map<CompanyDto>(_repository.Company.GetCompany(companyId, trackChanges));
 }
